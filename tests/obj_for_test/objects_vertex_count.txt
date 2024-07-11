@@ -1,0 +1,12 @@
+face: 468
+Stanford_bunny: 
+Tea_pot: 3.644
+cheburashka: 6.669
+happy: 49.251
+Nefertiti: 49.971
+Lucy: 49.987
+Armadillo: 49.990
+ogre: 62.194
+Dragon: 125.066
+bimba: 112.455
+Igea: 134.348
