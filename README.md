@@ -93,6 +93,10 @@ python3 main.py
 Enter the path to the images folder: /path/to/your/images/folder
 ```
 
+<p align="center">
+  <img src="https://github.com/MatheusPaivaa/CurvatureML/blob/master/img/mediapipe_example.png" alt="face" width="200"/>
+</p>
+
 #### Curvature Calculation and Feature Extraction (./scripts/curv_features_calculation)
 
 To calculate the curvatures and extract features from the 3D `.obj` files, follow these steps:
@@ -130,6 +134,12 @@ python3 [script]
 
 ## <div id="Dataset"></div>Dataset
 The dataset used in this project is [Human Faces](https://www.kaggle.com/datasets/ashwingupta3012/human-faces?resource=download) from Kaggle. This dataset contains a collection of 3D human face models that are essential for training and evaluating the curvature estimation algorithms.
+
+<p align="center">
+  <img src="https://github.com/MatheusPaivaa/CurvatureML/blob/master/img/rosto.jpg" alt="face" width="200"/>
+  <img src="https://github.com/MatheusPaivaa/CurvatureML/blob/master/img/rosto_aug_5.jpg" alt="face_aug" width="200"/>
+  <img src="https://github.com/MatheusPaivaa/CurvatureML/blob/master/img/rosto_aug_6.jpg" alt="face_aug_2" width="200"/>
+</p>
 
 Additionally, another valuable resource is the [FEI Face Database](https://fei.edu.br/~cet/facedatabase.html), which is highly recommended for further training and evaluation purposes. This dataset provides a different set of facial images that can be used to enhance the robustness and generalization of the models.
 
