@@ -46,7 +46,8 @@ source env/bin/activate  # On Windows use `env\Scripts\activate`
 pip install -r requirements.txt
 
 # Run the Project
-# After installation, you can start using the project by running the main script or any other relevant scripts
+# After installation, you can start using the project by running the main
+# script or any other relevant scripts
 ```
 Ensure that you have Python 3.7 or later installed on your machine.
 
