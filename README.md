@@ -22,7 +22,29 @@ This proposal is part of the context of machine learning algorithms for estimati
 </div>
 
 ## <div id="project-structure"></div>Project Structure
+This project is organized into two main functions:
 
+1. **3D Mesh Generation and Preprocessing**
+   - **3D Mesh Formation:** Using MediaPipe, the project generates 3D meshes from 2D images, creating `.obj` files that represent the facial structures. These meshes are then used for further analysis and model training. [Folder Link](https://github.com/MatheusPaivaa/CurvatureML/tree/master/scripts/object_generation)
+   - **Feature and Label Extraction:** Features and labels are extracted by annotating the mesh, which involves identifying key points and regions on the 3D models that correspond to specific curvature characteristics. [Folder Link](https://github.com/MatheusPaivaa/CurvatureML/tree/master/scripts/curv_features_calculation)
+   - **Dataset Assembly:** The preprocessed data is compiled into a structured dataset, ready for training machine learning models. [Folder Link](https://github.com/MatheusPaivaa/CurvatureML/tree/master/scripts/curv_features_calculation)
+
+2. **Model Implementation and Testing**
+   - Several machine learning models have been implemented and tested to estimate curvature. The models currently tested include:
+     - **Support Vector Regression (SVR)**
+     - **Decision Tree**
+     - **Random Forest**
+     - **Multilayer Perceptron (MLP)**
+
+   [Models Folder](https://github.com/MatheusPaivaa/CurvatureML/tree/master/models)
+
+The project directory is structured to support these two functions, with separate folders and scripts dedicated to preprocessing tasks and model training/testing.
+
+#### Disclaimer
+
+In addition to the main functions of the project, there are also several **useful scripts** included in the repository. These scripts can assist with various tasks such as data visualization, additional preprocessing, and debugging. While not central to the primary objectives of the project, they provide valuable tools that can streamline and enhance your workflow.
+
+You can find these scripts in the [useful_scripts](https://github.com/MatheusPaivaa/CurvatureML/tree/master/scripts/useful_scripts) directory or scattered throughout the other directories depending on their specific functionality.
 
 ## <div id="installation"></div>Installation
 To set up the project environment and install the necessary dependencies, follow these steps:
