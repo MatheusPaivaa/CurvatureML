@@ -7,6 +7,7 @@
   <a href="#usage">Usage</a> • 
   <a href="#dataset">Dataset</a> • 
   <a href="#algorithms-and-models">Algorithms and Models</a> •
+  <a href="#feature-selection">Feature Selection</a> •
   <a href="#results">Results</a> •
   <a href="#contributing">Contributing</a> •
   <a href="#license">License</a> •
@@ -79,6 +80,65 @@ The dataset used in this project is [Human Faces](https://www.kaggle.com/dataset
 Additionally, another valuable resource is the [FEI Face Database](https://fei.edu.br/~cet/facedatabase.html), which is highly recommended for further training and evaluation purposes. This dataset provides a different set of facial images that can be used to enhance the robustness and generalization of the models.
 
 ## <div id="algorithms-and-models"></div>Algorithms and Models
+
+#### Curvature Calculation and Feature Extraction
+
+Curvatures, both mean and Gaussian, are geometric properties used to characterize the shape and curvature of surfaces, with broad applications in computer graphics and computational geometry. The geometric definitions and calculations of both curvatures are provided in the following subsections.
+
+To efficiently calculate the labels (curvature values) and features, a custom algorithm was implemented in C++ using an `unordered_map` structure. This data structure was chosen for its average-case constant time complexity, allowing for fast access and organization of the calculated curvature values.
+
+#### Algorithm Overview:
+
+1. **Input Data Structure:**
+   - The algorithm takes 3D mesh data as input, typically stored in a format like `.obj`. Each vertex and its corresponding normal vectors are processed to calculate the mean and Gaussian curvatures.
+
+2. **Curvature Calculation:**
+   - For each vertex in the mesh, the algorithm computes the mean and Gaussian curvatures using discrete differential geometry methods. The calculations are based on the local neighborhood of each vertex, considering the angles and areas of the surrounding triangles.
+
+3. **Storage in `unordered_map`:**
+   - The calculated curvature values (both mean and Gaussian) for each vertex are stored in an `unordered_map`, where the key is the vertex identifier, and the value is a pair of curvature values (mean, Gaussian).
+   - This approach ensures that each vertex's curvature can be accessed in constant time, making the process highly efficient, especially for large meshes.
+
+4. **Feature Extraction:**
+   - Additional features related to the surface's geometric properties are extracted and also stored in the `unordered_map`. These features include the angles between adjacent normal vectors, edge lengths, and triangle areas.
+   - The extracted features, along with the calculated curvatures, form the input dataset for the subsequent machine learning models.
+
+5. **Performance Optimization:**
+   - The use of `unordered_map` significantly reduces the time complexity of organizing and retrieving the curvature and feature data, allowing for rapid comparisons with the proposed machine learning models. This efficiency is critical when dealing with large datasets, as it minimizes computational overhead and speeds up the entire process.
+
+**References:**
+
+- CRANE, K. Discrete Differential Geometry - CMU 15-458/858. Lecture 16. 2019. Available at: <https://www.youtube.com/watch?v=NlU1m-OfumE>. Accessed on: August 17, 2024.
+- CRANE, K. Discrete Differential Geometry - CMU 15-458/858. Lecture 17. 2019. Available at: <https://www.youtube.com/watch?v=sokeN5VxBB8>. Accessed on: August 17, 2024.
+
+#### Model Implementation and Testing
+
+The project involves the implementation and testing of several machine learning models to estimate curvatures based on the extracted features:
+
+- **Support Vector Regression (SVR):** A regression model that finds the optimal hyperplane for predicting continuous values, effective for high-dimensional data.
+- **Decision Tree:** A non-linear model that makes predictions based on learned decision rules from the data, easy to interpret but prone to overfitting.
+- **Random Forest:** An ensemble method that builds multiple decision trees and merges them to improve prediction accuracy and control overfitting.
+- **Multilayer Perceptron (MLP):** A type of neural network model composed of multiple layers of neurons, capable of capturing complex patterns in the data.
+
+## <div id="feature-delection"></div>Feature Selection
+
+In this project, a careful selection of features was made to ensure that the model can accurately capture the geometric properties of the 3D mesh. The features chosen for training the model are as follows:
+
+- **X, Y, Z:** These are the Cartesian coordinates of each vertex in the 3D mesh, representing its position in space.
+- **MeanAdjX, MeanAdjY, MeanAdjZ:** These features represent the mean coordinates of the adjacent vertices for each vertex, providing a measure of the local geometric context.
+- **VertexDegree:** This indicates the number of edges connected to each vertex, giving insight into the complexity of the local mesh topology.
+- **starArea:** The total area of the triangles (or faces) adjacent to each vertex, reflecting the local surface area around the vertex.
+- **NumAdjFaces:** The number of faces (triangles) adjacent to each vertex, which can be used to infer the density of the mesh in that region.
+- **NormalX, NormalY, NormalZ:** These are the components of the normal vector at each vertex, essential for understanding the surface orientation.
+- **MeanNormalX, MeanNormalY, MeanNormalZ:** These features represent the mean normal vectors of the adjacent vertices, offering additional information about the surface's smoothness and curvature.
+
+#### Importance of Selected Features
+
+Each of these features plays a critical role in characterizing the geometry of the 3D mesh:
+
+- **Spatial Position (X, Y, Z):** The basic position of vertices is fundamental to understanding the overall shape and layout of the mesh.
+- **Local Geometry (MeanAdjX, MeanAdjY, MeanAdjZ, VertexDegree, starArea, NumAdjFaces):** These features provide information about the local structure around each vertex, crucial for capturing variations in the surface curvature.
+- **Surface Orientation (NormalX, NormalY, NormalZ, MeanNormalX, MeanNormalY, MeanNormalZ):** The normal vectors and their means are key to understanding the direction and smoothness of the surface at each point, directly influencing the curvature calculations.
 
 ## <div id="results"></div>Results
 
