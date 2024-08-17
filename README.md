@@ -18,7 +18,7 @@ This proposal is part of the context of machine learning algorithms for estimati
 </p>
 
 <div align="center">
-  <img src="https://github.com/MatheusPaivaa/CurvatureML/blob/master/img/met.png" alt="metodology" />
+  <img src="https://github.com/MatheusPaivaa/CurvatureML/blob/master/img/met_ing.png" alt="metodology" />
 </div>
 
 ## <div id="project-structure"></div>Project Structure
@@ -37,8 +37,6 @@ This project is organized into two main functions:
      - **Multilayer Perceptron (MLP)**
 
    [Models Folder](https://github.com/MatheusPaivaa/CurvatureML/tree/master/models)
-
-The project directory is structured to support these two functions, with separate folders and scripts dedicated to preprocessing tasks and model training/testing.
 
 #### Disclaimer
 
