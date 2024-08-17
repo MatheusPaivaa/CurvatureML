@@ -12,6 +12,7 @@
   <a href="#contributing">Contributing</a> •
   <a href="#license">License</a> •
   <a href="#acknowledgements">Acknowledgements</a>
+  <a href="#bibliography">Bibliography</a>
 </p>
 
 <p align="center">
@@ -147,7 +148,7 @@ Additionally, another valuable resource is the [FEI Face Database](https://fei.e
 
 #### Curvature Calculation and Feature Extraction
 
-Curvatures, both mean and Gaussian, are geometric properties used to characterize the shape and curvature of surfaces, with broad applications in computer graphics and computational geometry. The geometric definitions and calculations of both curvatures are provided in the following subsections.
+Curvatures, both mean and Gaussian, are geometric properties used to characterize the shape and curvature of surfaces, with broad applications in computer graphics and computational geometry. The geometric definitions and calculations of both curvatures are provided in the bibliography.
 
 To efficiently calculate the labels (curvature values) and features, a custom algorithm was implemented in C++ using an `unordered_map` structure. This data structure was chosen for its average-case constant time complexity, allowing for fast access and organization of the calculated curvature values.
 
@@ -169,11 +170,6 @@ To efficiently calculate the labels (curvature values) and features, a custom al
 
 5. **Performance Optimization:**
    - The use of `unordered_map` significantly reduces the time complexity of organizing and retrieving the curvature and feature data, allowing for rapid comparisons with the proposed machine learning models. This efficiency is critical when dealing with large datasets, as it minimizes computational overhead and speeds up the entire process.
-
-**References:**
-
-- CRANE, K. Discrete Differential Geometry - CMU 15-458/858. Lecture 16. 2019. Available at: <https://www.youtube.com/watch?v=NlU1m-OfumE>. Accessed on: August 17, 2024.
-- CRANE, K. Discrete Differential Geometry - CMU 15-458/858. Lecture 17. 2019. Available at: <https://www.youtube.com/watch?v=sokeN5VxBB8>. Accessed on: August 17, 2024.
 
 #### Model Implementation and Testing
 
@@ -214,5 +210,17 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## <div id="acknowledgements"></div>Acknowledgements
 I would like to thank Joao E.S. Batista Neto, Farid Tari, and Antonio Castelo Filho for their guidance and support throughout this project.
+
+## <div id="bibliography"></div>Bibliography
+
+1. **Crane, K.** *Discrete Differential Geometry - CMU 15-458/858. Lecture 16.* 2019. Available at: [https://www.youtube.com/watch?v=NlU1m-OfumE](https://www.youtube.com/watch?v=NlU1m-OfumE). Accessed on: December 11, 2023.
+
+2. **Crane, K.** *Discrete Differential Geometry - CMU 15-458/858. Lecture 17.* 2019. Available at: [https://www.youtube.com/watch?v=sokeN5VxBB8](https://www.youtube.com/watch?v=sokeN5VxBB8). Accessed on: December 11, 2023.
+
+3. **Bruce, J. W.; Giblin, P. J.** *Curves and Singularities: A Geometrical Introduction to Singularity Theory.* 2nd ed. Cambridge: Cambridge University Press, 1992.
+
+2. **Meyer, M. et al.** *Discrete Differential-Geometry Operators for Triangulated 2-Manifolds.* In: Springer. *Visualization and Mathematics III.* [S.l.], 2003, pp. 35–57.
+
+3. **Lugaresi, C. et al.** *MediaPipe: A Framework for Building Perception Pipelines.* arXiv preprint arXiv:1906.08172, 2019.
 
 [comment]: <> (Notebook: https://colab.research.google.com/drive/1vOrjJOcYwbcm86kxqWYi1lbH6Wy4KLBU?usp=sharing)
