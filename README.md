@@ -74,6 +74,60 @@ Ensure that you have Python 3.7 or later installed on your machine.
 
 ## <div id="usage"></div>Usage
 
+#### Generating 3D OBJ Files (./scripts/object_generation.py)
+
+To generate 3D `.obj` files from 2D images, follow these steps:
+
+1. **Organize Your Images:**
+   Place the images you want to convert into a folder.
+
+2. **Run the Script:**
+   Execute the provided script to process the images and generate `.obj` files. You will need to specify the path to the images folder when prompted.
+
+3. **Check the Output:**
+   The generated `.obj` files will be saved in the designated output folder (e.g., `../../data/face_processed`).
+   
+```bash
+python3 main.py
+
+Enter the path to the images folder: /path/to/your/images/folder
+```
+
+#### Curvature Calculation and Feature Extraction (./scripts/curv_features_calculation)
+
+To calculate the curvatures and extract features from the 3D `.obj` files, follow these steps:
+
+1. **Prepare the Input Files:**
+   Ensure that your processed 3D `.obj` files are located in the designated input directory (e.g., `../../data/face_processed`).
+
+2. **Run the C++ Program:**
+   Execute the C++ program to process each `.obj` file in the input directory. The program will:
+   - Calculate the Gaussian and Mean curvatures.
+   - Extract features from the 3D mesh.
+   - Save the curvature results and extracted features in separate output files.
+
+3. **Check the Output:**
+   The output files will be saved in the specified directories (e.g., `../../data/in_out_processed/output` for curvatures and `../../data/in_out_processed/input` for features).
+
+After running the program, you will have both curvature data and feature vectors ready for use in training and evaluating your machine learning models.
+
+```bash
+make all
+make run
+```
+
+#### Model Implementation (./models)
+
+This project includes the implementation of four different models for curvature estimation. Each model has its own dedicated directory, following a standardized structure:
+
+- **Train:** Contains the script used to train the model.
+- **Test:** Contains the script used to test the model on a specific face and plot the results.
+- **Tune:** Contains scripts for hyperparameter tuning, allowing you to optimize the model’s performance by adjusting key parameters.
+  
+```bash
+python3 [script]
+```
+
 ## <div id="Dataset"></div>Dataset
 The dataset used in this project is [Human Faces](https://www.kaggle.com/datasets/ashwingupta3012/human-faces?resource=download) from Kaggle. This dataset contains a collection of 3D human face models that are essential for training and evaluating the curvature estimation algorithms.
 
