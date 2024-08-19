@@ -23,6 +23,8 @@ This proposal is part of the context of machine learning algorithms for estimati
   <img src="https://github.com/MatheusPaivaa/CurvatureML/blob/master/img/met_ing.png" alt="metodology" />
 </div>
 
+**Notebook:** https://colab.research.google.com/drive/1vOrjJOcYwbcm86kxqWYi1lbH6Wy4KLBU?usp=sharing
+
 ## <div id="project-structure"></div>Project Structure
 This project is organized into two main functions:
 
@@ -199,6 +201,8 @@ Each of these features plays a critical role in characterizing the geometry of t
 - **Spatial Position (X, Y, Z):** The basic position of vertices is fundamental to understanding the overall shape and layout of the mesh.
 - **Local Geometry (MeanAdjX, MeanAdjY, MeanAdjZ, VertexDegree, starArea, NumAdjFaces):** These features provide information about the local structure around each vertex, crucial for capturing variations in the surface curvature.
 - **Surface Orientation (NormalX, NormalY, NormalZ, MeanNormalX, MeanNormalY, MeanNormalZ):** The normal vectors and their means are key to understanding the direction and smoothness of the surface at each point, directly influencing the curvature calculations.
+
+#### Tuning features
 
 ## <div id="results"></div>Results
 
