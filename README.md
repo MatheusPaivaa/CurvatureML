@@ -22,7 +22,7 @@ This proposal is part of the context of machine learning algorithms for estimati
 <div align="center">
   <img src="https://github.com/MatheusPaivaa/CurvatureML/blob/master/img/met_ing.png" alt="metodology" />
 </div>
-
+<br>
 **Notebook:** https://colab.research.google.com/drive/1vOrjJOcYwbcm86kxqWYi1lbH6Wy4KLBU?usp=sharing
 
 ## <div id="project-structure"></div>Project Structure
