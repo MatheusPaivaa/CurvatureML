@@ -182,6 +182,10 @@ The project involves the implementation and testing of several machine learning 
 - **Random Forest:** An ensemble method that builds multiple decision trees and merges them to improve prediction accuracy and control overfitting.
 - **Multilayer Perceptron (MLP):** A type of neural network model composed of multiple layers of neurons, capable of capturing complex patterns in the data.
 
+#### Parameters tuning
+
+To tune the parameters of the tested models, **Grid Search** combined with **Cross-Validation** was employed. This method systematically explored various parameter combinations and identified those that provided the best performance, ensuring a more robust and optimized model.
+
 ## <div id="feature-delection"></div>Feature Selection
 
 In this project, a careful selection of features was made to ensure that the model can accurately capture the geometric properties of the 3D mesh. The features chosen for training the model are as follows:
