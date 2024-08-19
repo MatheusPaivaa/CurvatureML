@@ -204,6 +204,8 @@ Each of these features plays a critical role in characterizing the geometry of t
 
 #### Tuning features
 
+To refine the feature set, **Recursive Feature Elimination (RFE)** was used. RFE iteratively removed the least important features, aiming to retain only the most influential ones. The selected features were then used to train.
+
 ## <div id="results"></div>Results
 
 🚧 Testing... 🚧
