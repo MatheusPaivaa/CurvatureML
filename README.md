@@ -184,7 +184,7 @@ The project involves the implementation and testing of several machine learning 
 
 #### Parameters tuning
 
-To tune the parameters of the tested models, **Grid Search** combined with **Cross-Validation** was employed. This method systematically explored various parameter combinations and identified those that provided the best performance, ensuring a more robust and optimized model.
+To tune the parameters of the tested models, **Grid Search** combined with **Cross-Validation** was employed. This method systematically explored various parameter combinations and identified those that provided the best performance, ensuring a more robust and optimized model. [Example](https://github.com/MatheusPaivaa/CurvatureML/tree/master/models/random_forest/tune)
 
 ## <div id="feature-delection"></div>Feature Selection
 
@@ -208,7 +208,7 @@ Each of these features plays a critical role in characterizing the geometry of t
 
 #### Tuning features
 
-To refine the feature set, **Recursive Feature Elimination (RFE)** was used. RFE iteratively removed the least important features, aiming to retain only the most influential ones. The selected features were then used to train.
+To refine the feature set, **Recursive Feature Elimination (RFE)** was used. RFE iteratively removed the least important features, aiming to retain only the most influential ones. The selected features were then used to train. [Example](https://github.com/MatheusPaivaa/CurvatureML/tree/master/models/random_forest/tune)
 
 ## <div id="results"></div>Results
 
