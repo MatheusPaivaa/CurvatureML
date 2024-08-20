@@ -198,6 +198,11 @@ In this project, a careful selection of features was made to ensure that the mod
 - **NormalX, NormalY, NormalZ:** These are the components of the normal vector at each vertex, essential for understanding the surface orientation.
 - **MeanNormalX, MeanNormalY, MeanNormalZ:** These features represent the mean normal vectors of the adjacent vertices, offering additional information about the surface's smoothness and curvature.
 
+<div align="center">
+  <img width="400" src="https://github.com/MatheusPaivaa/CurvatureML/blob/master/img/curv_prop.png" alt="metodology" />
+  <p>Crane (2024)</p>
+</div>
+
 #### Importance of Selected Features
 
 Each of these features plays a critical role in characterizing the geometry of the 3D mesh:
@@ -229,10 +234,12 @@ I would like to thank Joao E.S. Batista Neto, Farid Tari, and Antonio Castelo Fi
 
 2. **Crane, K.** *Discrete Differential Geometry - CMU 15-458/858. Lecture 17.* 2019. Available at: [https://www.youtube.com/watch?v=sokeN5VxBB8](https://www.youtube.com/watch?v=sokeN5VxBB8). Accessed on: December 11, 2023.
 
-3. **Bruce, J. W.; Giblin, P. J.** *Curves and Singularities: A Geometrical Introduction to Singularity Theory.* 2nd ed. Cambridge: Cambridge University Press, 1992.
+4. **Bruce, J. W.; Giblin, P. J.** *Curves and Singularities: A Geometrical Introduction to Singularity Theory.* 2nd ed. Cambridge: Cambridge University Press, 1992.
 
-2. **Meyer, M. et al.** *Discrete Differential-Geometry Operators for Triangulated 2-Manifolds.* In: Springer. *Visualization and Mathematics III.* [S.l.], 2003, pp. 35–57.
+5. **Meyer, M. et al.** *Discrete Differential-Geometry Operators for Triangulated 2-Manifolds.* In: Springer. *Visualization and Mathematics III.* [S.l.], 2003, pp. 35–57.
 
-3. **Lugaresi, C. et al.** *MediaPipe: A Framework for Building Perception Pipelines.* arXiv preprint arXiv:1906.08172, 2019.
+6. **Lugaresi, C. et al.** *MediaPipe: A Framework for Building Perception Pipelines.* arXiv preprint arXiv:1906.08172, 2019.
 
-[comment]: <> (Notebook: https://colab.research.google.com/drive/1vOrjJOcYwbcm86kxqWYi1lbH6Wy4KLBU?usp=sharing)
+7. **CRANE, K.** A Quick and Dirty Introduction to the Curvature of Surfaces. 2024.<http://wordpress.discretization.de/geometryprocessingandapplicationsws19/a-quick-and-dirty-introduction-to-the-curvature-of-surfaces/>. Online resource.
+
+
