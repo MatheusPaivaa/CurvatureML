@@ -226,7 +226,7 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## <div id="acknowledgements"></div>Acknowledgements
-I would like to thank Joao E.S. Batista Neto, Farid Tari, and Antonio Castelo Filho for their guidance and support throughout this project.
+I would like to thank Joao E.S. Batista Neto, Farid Tari, Antonio Castelo Filho, and @ for their guidance and support throughout this project.
 
 ## <div id="bibliography"></div>Bibliography
 
