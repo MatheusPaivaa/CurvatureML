@@ -182,7 +182,8 @@ The project involves the implementation and testing of several machine learning 
 - **Support Vector Regression (SVR):** A regression model that finds the optimal hyperplane for predicting continuous values, effective for high-dimensional data.
 - **Decision Tree:** A non-linear model that makes predictions based on learned decision rules from the data, easy to interpret but prone to overfitting.
 - **Random Forest:** An ensemble method that builds multiple decision trees and merges them to improve prediction accuracy and control overfitting.
-- **Multilayer Perceptron (MLP):** A type of neural network model composed of multiple layers of neurons, capable of capturing complex patterns in the data.
+- **Multilayer Perceptron (MLP):** A type of neural network model composed of multiple layers of neurons, capable of capturing complex patterns in the data. **-> NOT IMPLEMENTED!**
+
 
 #### Parameters tuning
 
@@ -228,7 +229,7 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## <div id="acknowledgements"></div>Acknowledgements
-I would like to thank Joao E.S. Batista Neto, Farid Tari, Antonio Castelo Filho, and @ for their guidance and support throughout this project.
+I would like to thank Joao E.S. Batista Neto, Farid Tari, Antonio Castelo Filho, and João Pedro Viguini T. T. Correa for their guidance and support throughout this project.
 
 ## <div id="bibliography"></div>Bibliography
 
