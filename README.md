@@ -34,11 +34,11 @@ This project is organized into two main functions:
    - **Dataset Assembly:** The preprocessed data is compiled into a structured dataset, ready for training machine learning models. [Folder Link](https://github.com/MatheusPaivaa/CurvatureML/tree/master/scripts/curv_features_calculation)
 
 2. **Model Implementation and Testing**
-   - Several machine learning models have been implemented and tested to estimate curvature. The models currently tested include:
+   - Several machine learning models have been proposed and tested to estimate curvature. The models currently tested include:
      - **Support Vector Regression (SVR)**
      - **Decision Tree**
      - **Random Forest**
-     - **Multilayer Perceptron (MLP)**
+     - **Multilayer Perceptron (MLP) -> NOT IMPLEMENTED!**
 
    [Models Folder](https://github.com/MatheusPaivaa/CurvatureML/tree/master/models)
 
@@ -130,6 +130,8 @@ This project includes the implementation of four different models for curvature 
 - **Train:** Contains the script used to train the model.
 - **Test:** Contains the script used to test the model on a specific face and plot the results.
 - **Tune:** Contains scripts for hyperparameter tuning, allowing you to optimize the model’s performance by adjusting key parameters.
+
+**Note:** Only the input folder name and the test files need to be changed as needed. The rest of the structure and scripts should remain consistent across different models.
   
 ```bash
 python3 [script]
