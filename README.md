@@ -38,7 +38,8 @@ This project is organized into two main functions:
      - **Support Vector Regression (SVR)**
      - **Decision Tree**
      - **Random Forest**
-     - **Multilayer Perceptron (MLP) -> NOT IMPLEMENTED!**
+     - **Multilayer Perceptron (MLP)**
+     - **XGBoost**
 
    [Models Folder](https://github.com/MatheusPaivaa/CurvatureML/tree/master/models)
 
@@ -182,7 +183,8 @@ The project involves the implementation and testing of several machine learning 
 - **Support Vector Regression (SVR):** A regression model that finds the optimal hyperplane for predicting continuous values, effective for high-dimensional data.
 - **Decision Tree:** A non-linear model that makes predictions based on learned decision rules from the data, easy to interpret but prone to overfitting.
 - **Random Forest:** An ensemble method that builds multiple decision trees and merges them to improve prediction accuracy and control overfitting.
-- **Multilayer Perceptron (MLP):** A type of neural network model composed of multiple layers of neurons, capable of capturing complex patterns in the data. **-> NOT IMPLEMENTED!**
+- **Multilayer Perceptron (MLP):** A type of neural network model composed of multiple layers of neurons, capable of capturing complex patterns in the data.
+- **XGBoost:** An optimized distributed gradient boosting library designed to be highly efficient, flexible and portable.
 
 
 #### Parameters tuning
