@@ -9,30 +9,30 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..', 'read_data')))
 from read_data import read_obj_vertex, read_csv_output
 
-# Carregar o modelo de um arquivo
+# Load the model from a file
 with open('./trained_models/rf_model_obj.pkl', 'rb') as file:
     svr_loaded = pickle.load(file)
 
-# Usar o modelo carregado para fazer previsões
+# Use the loaded model to make predictions
 
-# Prever valores para um conjunto de teste
-x_test = read_obj_vertex('../face_objects_antigo/H00004.obj')
-y_real = read_csv_output('../curvaturas_antigo/curvatura_H00004.csv')
+# Predict values for a test set
+x_test = read_obj_vertex('../../../data/face_processed/face_2373.obj')
+y_real = read_csv_output('../../../data/in_out_processed/output/output_face_2373.csv')
 y_pred = svr_loaded.predict(x_test)
 
-# Calcular os erros
+# Calculate the errors
 mse = mean_squared_error(y_real, y_pred)
 mae = mean_absolute_error(y_real, y_pred)
 
 print("Mean Squared Error (MSE):", mse)
 print("Mean Absolute Error (MAE):", mae)
 
-# Plotar as curvas
+# Plot the curves
 plt.figure(figsize=(10, 6))
-plt.plot(y_real, label='Valores Reais', color='red')
-plt.plot(y_pred, label='Valores Previstos', linestyle='--', color='blue')
-plt.title('Comparação dos Valores Reais e Previstos')
-plt.xlabel('Índice')
-plt.ylabel('Valor')
+plt.plot(y_real, label='Real Values', color='red')
+plt.plot(y_pred, label='Predicted Values', linestyle='--', color='blue')
+plt.title('Comparison of Real and Predicted Values')
+plt.xlabel('Index')
+plt.ylabel('Value')
 plt.legend()
 plt.show()

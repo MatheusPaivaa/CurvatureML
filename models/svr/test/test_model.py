@@ -9,7 +9,6 @@ import time
 import sys
 import os
 
-# Add the directory above the current directory to sys.path to import the read_data module
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..', 'read_data')))
 from read_data import read_csv_features, read_csv_output
 
@@ -45,9 +44,9 @@ print("Mean Absolute Percentage Error (MAPE):", mape)
 plt.figure(figsize=(10, 6))
 plt.plot(y_real, label='Real Values', color='red')
 plt.plot(y_pred, label='Predicted Values', linestyle='--', color='blue')
-plt.title(f'Comparison of Real and Predicted Values (R² = {r2:.2f}) - Random Forest')
+plt.title('Comparison of Real and Predicted Values')
 plt.xlabel('Index')
-plt.ylabel('Values')
+plt.ylabel('Value')
 plt.legend()
 plt.show()
 
@@ -69,14 +68,14 @@ plt.scatter(range(len(residuals)), residuals, color='blue', edgecolor='k', alpha
 plt.axhline(y=0, color='red', linestyle='--')
 plt.title('Residual Analysis')
 plt.xlabel('Index')
-plt.ylabel('Residuals')
+plt.ylabel('Residual')
 plt.show()
 
-# Plot the distribution of residuals
+# Plot histogram of residuals
 plt.figure(figsize=(10, 6))
 plt.hist(residuals, bins=50, color='blue', edgecolor='k', alpha=0.7)
-plt.title('Distribution of Residuals')
-plt.xlabel('Residuals')
+plt.title('Residual Distribution')
+plt.xlabel('Residual')
 plt.ylabel('Frequency')
 plt.show()
 
@@ -84,7 +83,7 @@ plt.show()
 outliers = np.abs(residuals) > (np.mean(np.abs(residuals)) + 3 * np.std(np.abs(residuals)))
 print("Number of identified outliers:", np.sum(outliers))
 
-# Statistics of residuals
+# Descriptive Statistics of Errors
 residuals_df = pd.DataFrame(residuals, columns=['Residual'])
 print(residuals_df.describe())
 

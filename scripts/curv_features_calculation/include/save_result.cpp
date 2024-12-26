@@ -9,6 +9,9 @@ void save_result(const std::vector<double>& gaussianCurvature, const std::vector
         return;
     }
 
+    // Write the header to the file
+    file << "GaussianCurvature,MeanCurvature\n";
+
     // Set the precision for the output stream
     file << std::fixed << std::setprecision(14); // Adjust precision as needed
 

@@ -26,5 +26,5 @@ def rename_photos(directory):
         print(f'Renamed {old_path} to {new_path}')
 
 # Specify the directory where your photos are located
-directory = 'face_raw_1'
+directory = '../../data/raw'
 rename_photos(directory)

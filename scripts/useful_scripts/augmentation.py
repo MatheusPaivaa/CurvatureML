@@ -2,27 +2,27 @@ import os
 import cv2
 import albumentations as A
 
-# Diretórios
-input_dir = '../../fotos_treino'  # Diretório de entrada com as imagens originais
-output_dir = 'fotos_aumentadas'  # Diretório de saída para as imagens aumentadas
+# Directories
+input_dir = '../../raw'  # Input directory with original images
+output_dir = 'augmented_faces'  # Output directory for augmented images
 
-# Cria o diretório de saída se não existir
+# Create output directory if it does not exist
 os.makedirs(output_dir, exist_ok=True)
 
-# Função para carregar imagem
+# Function to load an image
 def load_image(file_path):
     return cv2.imread(file_path)
 
-# Função para salvar imagem
+# Function to save an image
 def save_image(file_path, image):
     cv2.imwrite(file_path, image)
 
-# Aumento de dados com Albumentations
+# Data augmentation with Albumentations
 def augment_image(image, augmenter):
     augmented = augmenter(image=image)
     return augmented['image']
 
-# Transformações de aumento de dados
+# Data augmentation transformations
 augmenter = A.Compose([
     A.HorizontalFlip(p=0.5),
     A.VerticalFlip(p=0.5),
@@ -39,12 +39,12 @@ augmenter = A.Compose([
     A.RandomFog(fog_coef_lower=0.1, fog_coef_upper=0.3, alpha_coef=0.1, p=0.1)
 ])
 
-# Processamento das imagens
+# Image processing
 for filename in os.listdir(input_dir):
     if filename.endswith(('.jpg', '.jpeg', '.png')):
         image_path = os.path.join(input_dir, filename)
         image = load_image(image_path)
-        for i in range(10):  # Criar 10 variações de aumento por imagem
+        for i in range(10):  # Create 10 augmented variations per image
             augmented_image = augment_image(image, augmenter)
             augmented_image_path = os.path.join(output_dir, f'{os.path.splitext(filename)[0]}_aug_{i}.jpg')
             save_image(augmented_image_path, augmented_image)

@@ -2,7 +2,7 @@ import numpy as np
 import os
 import pickle
 import sys
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.svm import SVR
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
@@ -40,16 +40,7 @@ y_all_obj = np.array(y_all_obj)
 X_train, X_test, y_train, y_test = train_test_split(X_all_obj, y_all_obj, test_size=0.3, random_state=42)
 
 # Creating and training the SVR model
-model = RandomForestRegressor(
-    n_estimators=500,
-    max_depth=15,
-    min_samples_split=10,
-    min_samples_leaf=4,
-    max_features='sqrt',
-    bootstrap=True,
-    oob_score=False,
-    random_state=42
-)
+model = SVR(kernel='rbf', C=1.0, epsilon=0.1)
 
 # Training model
 model.fit(X_train, y_train)
@@ -62,8 +53,8 @@ mse = mean_squared_error(y_test, y_pred)
 print(f'MSE: {mse:.2f}')
 
 score = model.score(X_test, y_test)
-print("Acuracy:", score)
+print("Acurácia:", score)
 
 # Save the trained model, if needed
-with open('../trained_models/rf_model_vertex_media.pkl', 'wb') as file:
+with open('../trained_models/svr_model_vertex.pkl', 'wb') as file:
     pickle.dump(model, file)
