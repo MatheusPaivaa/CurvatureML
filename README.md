@@ -12,7 +12,7 @@
   <a href="#results">Results</a> •
   <a href="#contributing">Contributing</a> •
   <a href="#license">License</a> •
-  <a href="#acknowledgements">Acknowledgements</a>
+  <a href="#acknowledgements">Acknowledgements</a> •
   <a href="#bibliography">Bibliography</a>
 </p>
 
