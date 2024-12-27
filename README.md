@@ -9,11 +9,11 @@
   <a href="#data-cleaning">Data Cleaning</a> • 
   <a href="#algorithms-and-models">Algorithms and Models</a> •
   <a href="#feature-selection">Feature Selection</a> •
-  <a href="#results">Results</a> •
   <a href="#contributing">Contributing</a> •
   <a href="#license">License</a> •
   <a href="#acknowledgements">Acknowledgements</a> •
-  <a href="#bibliography">Bibliography</a>
+  <a href="#bibliography">Bibliography</a> •
+  <a href="#citation">Citation
 </p>
 
 <p align="center">
@@ -238,10 +238,6 @@ Each of these features plays a critical role in characterizing the geometry of t
 
 To refine the feature set, **Recursive Feature Elimination (RFE)** was used. RFE iteratively removed the least important features, aiming to retain only the most influential ones. The selected features were then used to train. [Example](https://github.com/MatheusPaivaa/CurvatureML/tree/master/models/random_forest/tune)
 
-## <div id="results"></div>Results
-
-🚧 Testing... 🚧
-
 ## <div id="contributing"></div>Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
@@ -265,4 +261,17 @@ I would like to thank Joao E.S. Batista Neto, Farid Tari, Antonio Castelo Filho,
 
 7. **CRANE, K.** A Quick and Dirty Introduction to the Curvature of Surfaces. 2024.<http://wordpress.discretization.de/geometryprocessingandapplicationsws19/a-quick-and-dirty-introduction-to-the-curvature-of-surfaces/>. Online resource.
 
+## <div id="citation"></div>Citation
+
+```
+@misc{angarola2024,
+    author = {Matheus Paiva Angarola},
+    title = {Curvature Estimation Using Machine Learning Algorithms},
+    year = {2024},
+    institution = {Instituto de Ciências Matemáticas e de Computação (ICMC), Universidade de São Paulo (USP)},
+    note = {Grant number: 23/17907-0, Supported by FAPESP and associated with the thematic project 19/07316-0},
+    url = {https://bv.fapesp.br/en/bolsas/215767/curvature-estimation-using-machine-learning-algorithms/},
+    abstract = {This proposal investigates regression algorithms trained on feature vectors extracted from 3D meshes to estimate mean and Gaussian curvature, aiming to reduce processing time compared to conventional geometric techniques.}
+}
+```
 
