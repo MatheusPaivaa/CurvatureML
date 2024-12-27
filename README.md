@@ -6,6 +6,7 @@
   <a href="#installation">Installation</a> • 
   <a href="#usage">Usage</a> • 
   <a href="#dataset">Dataset</a> • 
+  <a href="#data-cleaning">Data Cleaning</a> • 
   <a href="#algorithms-and-models">Algorithms and Models</a> •
   <a href="#feature-selection">Feature Selection</a> •
   <a href="#results">Results</a> •
@@ -32,6 +33,7 @@ This project is organized into two main functions:
    - **3D Mesh Formation:** Using MediaPipe, the project generates 3D meshes from 2D images, creating `.obj` files that represent the facial structures. These meshes are then used for further analysis and model training. [Folder Link](https://github.com/MatheusPaivaa/CurvatureML/tree/master/scripts/object_generation)
    - **Feature and Label Extraction:** Features and labels are extracted by annotating the mesh, which involves identifying key points and regions on the 3D models that correspond to specific curvature characteristics. [Folder Link](https://github.com/MatheusPaivaa/CurvatureML/tree/master/scripts/curv_features_calculation)
    - **Dataset Assembly:** The preprocessed data is compiled into a structured dataset, ready for training machine learning models. [Folder Link](https://github.com/MatheusPaivaa/CurvatureML/tree/master/scripts/curv_features_calculation)
+   - **Data Cleaning:** The dataset undergoes normalization, outlier removal, handling of null values, and elimination of duplicates to ensure consistency and reliability for model training. [Folder Link](https://github.com/MatheusPaivaa/CurvatureML/tree/master/scripts/data_clean)
 
 2. **Model Implementation and Testing**
    - Several machine learning models have been proposed and tested to estimate curvature. The models currently tested include:
@@ -126,11 +128,12 @@ make run
 
 #### Model Implementation (./models)
 
-This project includes the implementation of four different models for curvature estimation. Each model has its own dedicated directory, following a standardized structure:
+This project includes the implementation of five different models for curvature estimation. Each model has its own dedicated directory, following a standardized structure:
 
 - **Train:** Contains the script used to train the model.
 - **Test:** Contains the script used to test the model on a specific face and plot the results.
 - **Tune:** Contains scripts for hyperparameter tuning, allowing you to optimize the model’s performance by adjusting key parameters.
+- **Trained Model:** Stores the trained models in .pkl format for future use and evaluation.
 
 **Note:** Only the input folder name and the test files need to be changed as needed. The rest of the structure and scripts should remain consistent across different models.
   
@@ -175,6 +178,21 @@ To efficiently calculate the labels (curvature values) and features, a custom al
 
 5. **Performance Optimization:**
    - The use of `unordered_map` significantly reduces the time complexity of organizing and retrieving the curvature and feature data, allowing for rapid comparisons with the proposed machine learning models. This efficiency is critical when dealing with large datasets, as it minimizes computational overhead and speeds up the entire process.
+
+## <div id="data-cleaning"></div>Data Cleaning
+
+The data cleaning process was conducted using a dedicated script designed to address key preprocessing tasks and meet the project's specific requirements. The main steps included:
+
+- **Handling Missing Values:** Removal of instances with missing values (deletion).
+- **Outlier Detection and Removal:** Application of Z-score with a threshold of 3 standard deviations.
+- **Redundancy Removal:** Elimination of redundant variables to reduce multicollinearity.
+- **Feature Normalization:** Transformation of variables using StandardScaler to achieve zero mean and unit variance.
+- **Correlation Analysis:** Evaluation of variable relationships to identify significant linear dependencies.
+- **Dimensionality Reduction:** Not applied, as the variables were already in a reduced dimension.
+
+#### Disclaimer
+
+The data cleaning methodology was based on the guidelines presented in the article: Corrales, D. C., Corrales, J. C., & Ledezma, A. (2018). How to Address the Data Quality Issues in Regression Models: A Guided Process for Data Cleaning. Symmetry, 10(4), 99. https://www.mdpi.com/2073-8994/10/4/99
 
 #### Model Implementation and Testing
 
