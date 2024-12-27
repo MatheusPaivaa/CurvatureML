@@ -9,6 +9,7 @@
   <a href="#data-cleaning">Data Cleaning</a> • 
   <a href="#algorithms-and-models">Algorithms and Models</a> •
   <a href="#feature-selection">Feature Selection</a> •
+  <a href="#future">Future Steps</a> •
   <a href="#contributing">Contributing</a> •
   <a href="#license">License</a> •
   <a href="#acknowledgements">Acknowledgements</a> •
@@ -237,6 +238,10 @@ Each of these features plays a critical role in characterizing the geometry of t
 #### Tuning features
 
 To refine the feature set, **Recursive Feature Elimination (RFE)** was used. RFE iteratively removed the least important features, aiming to retain only the most influential ones. The selected features were then used to train. [Example](https://github.com/MatheusPaivaa/CurvatureML/tree/master/models/random_forest/tune)
+
+## <div id="future"></div>Future Steps
+
+The project has opened several opportunities for future improvements, such as exploring new features that can better generalize different meshes, capturing relevant details for training while reducing overfitting. Additionally, new regression models, not yet explored, can be tested to expand the range of possible applications.
 
 ## <div id="contributing"></div>Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
